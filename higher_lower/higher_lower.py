@@ -1,13 +1,19 @@
 import random
 import game_data
+import art
 
 
 def get_random_account():
-    account = random.choice(game_data.data)
-    return account
+    return random.choice(game_data.data)
 
 
-account = get_random_account()
-print(account["name"])
-print(account["description"])
-print(account["country"])
+account_a = get_random_account()
+account_b = get_random_account()
+
+print(
+    f"Compare A: {account_a['name']}, {account_a['description']}, {account_a['country']}"
+)
+print(art.vs)
+print(
+    f"Compare B: {account_b['name']}, {account_b['description']}, {account_b['country']}"
+)
