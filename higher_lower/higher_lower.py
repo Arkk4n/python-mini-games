@@ -22,11 +22,11 @@ def main():
     )
     print(art.vs)
     print(
-        f"Compare B: {account_b['name']}, {account_b['description']},{account_b['country']}"
+        f"Compare B: {account_b['name']}, {account_b['description']}, {account_b['country']}"
     )
     guess = input("Who has more followers? Type A or B: ").lower().strip()
     if guess not in ["a", "b"]:
-        print("Please enter A or B")
+        return "Invalid input"
     winner = get_winner(account_a, account_b)
     if guess == winner:
         print("You win")
