@@ -37,6 +37,13 @@ while running:
             has_key = True
             print("You take the key.")
 
+    elif player_choice == "light torch":
+        if torch_lit:
+            print("The torch is already lit.")
+        else:
+            torch_lit = True
+            print("You light the torch.")
+
     elif player_choice == "north":
         if has_key:
             print(f"You unlock the door and escape. You win! (moves: {moves})")
@@ -49,4 +56,3 @@ while running:
         break
     else:
         print("Invalid command.")
-
