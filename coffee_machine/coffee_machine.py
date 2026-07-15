@@ -43,6 +43,14 @@ while machine_is_on:
         print(resources)
     elif client_input in MENU:
         drink = MENU[client_input]
-        print(drink)
+        print(drink["cost"])
+        print(drink["ingredients"])
+        are_resources_enough = True
+        for ingredient, needed_amount in drink["ingredients"].items():
+            if needed_amount > resources[ingredient]:
+                print(f"Not enough {ingredient}")
+                are_resources_enough = False
+        if are_resources_enough:
+            pass
     else:
         print("Unknown option.")
