@@ -21,6 +21,23 @@ while machine_is_on:
                 print(f"Not enough {ingredient}")
                 are_resources_enough = False
         if are_resources_enough:
-            pass
+            user_quarters = int(input("How many quarters?: "))
+            quarters = user_quarters * 0.25
+            user_dimes = int(input("How many dimes?: "))
+            dimes = user_dimes * 0.10
+            user_nickles = int(input("How many nickles?: "))
+            nickles = user_nickles * 0.05
+            user_pennies = int(input("How many pennies? "))
+            pennies = user_pennies * 0.01
+
+            entered_coins = quarters + dimes + nickles + pennies
+            print(entered_coins)
+
+            if entered_coins == drink["cost"]:
+                print("Your drink is prepared.")
+            elif entered_coins < drink["cost"]:
+                print("Not enough money for drink, please enter more coins.")
+            else:
+                print("You inserted more money, here is your back.")
     else:
         print("Unknown option.")
